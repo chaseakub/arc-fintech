@@ -13,9 +13,9 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           persist-credentials: false
-      - name: Install dependencies from the starter lockfile
+      - name: Install dependencies with the starter’s documented npm command
         run: |
           node --version
-          npm ci --no-audit --no-fund
+          npm install --no-audit --no-fund
       - name: Run the starter's own suite
         run: npm test
